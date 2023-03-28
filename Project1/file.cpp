@@ -19,8 +19,8 @@ int	nBomb = DIM;
 
 inline int& mask(int x, int y,int maskarr[][DIM]) { return maskarr[y][x]; }
 inline int& label(int x, int y, int labelarr[][DIM]) { return labelarr[y][x]; }
-inline bool	isValid(int x, int y) { return (x >= 0 && x < nx&& y >= 0 && y < ny); } //선택한 위치가 지뢰판 범위내에 있는지 확인
-inline bool	isBomb(int x, int y,int labelarr[][DIM]) { return isValid(x, y) && label(x, y, labelarr) == Bomb; }   //선택한 위치가 지뢰판 범위내에 있고 lable 에 폭탄이 있으면 1
+inline bool	isValid(int x, int y) { return (x >= 0 && x < nx&& y >= 0 && y < ny); } 
+inline bool	isBomb(int x, int y,int labelarr[][DIM]) { return isValid(x, y) && label(x, y, labelarr) == Bomb; } 
 inline bool	isEmpty(int x, int y,int labelarr [][DIM]) { return isValid(x, y) && label(x, y, labelarr) == Empty; }
 
 void dig(int x, int y, int maskarr[][DIM], int labelarr[][DIM]) { //마스크 open 함수
